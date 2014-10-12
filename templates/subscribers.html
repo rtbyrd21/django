@@ -1,0 +1,13 @@
+<html>
+<body>
+<h1>Subscribers</h1>
+{% for subscriber in subscribers %}
+<div>
+  <h2>
+      <a href="/subscribers/get/{{ subscriber.id }}">{{ subscriber.name }}</a>
+  </h2>
+<p>{{ subscriber.address_line_one }}</p>
+</div>
+{% endfor %}
+</body>
+</html>
