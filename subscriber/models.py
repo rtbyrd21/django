@@ -13,3 +13,17 @@ class Subscriber(models.Model):
 
     def __unicode__(self):
         return self.name
+
+class Issue(models.Model):
+    Volume = models.IntegerField()
+    Number = models.IntegerField()
+
+    def __unicode__(self):
+        return unicode(self.Volume)
+
+class Order(models.Model):
+    subscriber = models.ForeignKey(Subscriber)
+    issue = models.ForeignKey(Issue)
+
+    def __unicode__(self):
+        return unicode(self.subscriber)
