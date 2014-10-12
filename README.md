@@ -1,0 +1,4 @@
+django
+======
+
+Basic django admin
